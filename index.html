@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reflejo Med Spa | Botox, Fillers & Advanced Skin Care in Phoenix, AZ</title>
+  <meta name="description" content="Reflejo Med Spa in Phoenix, AZ — Botox, dermal fillers, HydraFacial, laser hair removal, microneedling and medical-grade skin care. Book your consultation online today." />
+  <meta name="theme-color" content="#1f1a17" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1f1a17',
+            cream: '#faf6f1',
+            sand: '#efe5d8',
+            blush: '#e8c9bd',
+            rose: { 50:'#fbf3f0', 100:'#f6e4dd', 300:'#e2b3a3', 500:'#c98b76', 600:'#b5715c', 700:'#965a48' },
+            gold: { 300:'#e6cf9f', 400:'#d8b878', 500:'#c9a25a', 600:'#a9843f' },
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'serif'],
+            sans: ['Manrope', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- AOS animations -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="bg-cream text-ink font-sans antialiased overflow-x-hidden">
+
+  <!-- Preloader -->
+  <div id="preloader" class="fixed inset-0 z-[100] bg-ink flex items-center justify-center">
+    <div class="text-center">
+      <div class="font-serif text-5xl text-cream tracking-wide preloader-logo">Reflejo</div>
+      <div class="mt-2 text-[11px] uppercase tracking-[0.5em] text-gold-400">Med Spa</div>
+      <div class="mt-6 h-[2px] w-40 mx-auto bg-white/10 overflow-hidden rounded"><div class="preloader-bar h-full bg-gold-400"></div></div>
+    </div>
+  </div>
+
+  <!-- Demo ribbon -->
+  <div class="bg-ink text-cream/80 text-[11px] sm:text-xs text-center py-1.5 sm:py-2 px-4 truncate tracking-wide relative z-50">
+    <i class="ri-sparkling-2-line text-gold-400"></i>
+    <span class="sm:hidden">Website concept for <span class="text-gold-300 font-semibold">Reflejo Med Spa</span></span>
+    <span class="hidden sm:inline">Website concept designed for <span class="text-gold-300 font-semibold">Reflejo Med Spa</span> — Phoenix, AZ · Live demo with booking & automations</span>
+  </div>
+
+  <!-- Navbar -->
+  <header id="navbar" class="sticky top-0 z-40 transition-all duration-500">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-5 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-3">
+      <a href="#home" class="flex items-center gap-2.5 sm:gap-3 group shrink-0">
+        <span class="w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-gold-500/60 flex items-center justify-center font-serif text-xl sm:text-2xl text-gold-600 group-hover:rotate-[360deg] transition-transform duration-700">R</span>
+        <span class="leading-none">
+          <span class="block font-serif text-xl sm:text-2xl font-semibold tracking-wide">Reflejo</span>
+          <span class="block text-[9px] sm:text-[10px] uppercase tracking-[0.4em] text-rose-600">Med Spa</span>
+        </span>
+      </a>
+
+      <ul class="hidden xl:flex items-center gap-8 text-sm font-medium whitespace-nowrap">
+        <li><a href="#treatments" class="nav-link">Treatments</a></li>
+        <li><a href="#results" class="nav-link">Results</a></li>
+        <li><a href="#memberships" class="nav-link">Memberships</a></li>
+        <li><a href="#automation" class="nav-link">Smart Booking</a></li>
+        <li><a href="#reviews" class="nav-link">Reviews</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="hidden md:flex items-center gap-4 ml-auto xl:ml-0 mr-3 xl:mr-0 whitespace-nowrap">
+        <a href="tel:+16026897795" class="hidden lg:flex text-sm font-semibold items-center gap-2 hover:text-rose-600 transition"><i class="ri-phone-line text-lg"></i>(602) 689-7795</a>
+        <a href="#book" class="btn-primary">Book Now</a>
+      </div>
+
+      <div class="flex items-center gap-2 md:hidden ml-auto">
+        <a href="tel:+16026897795" class="w-10 h-10 rounded-full bg-rose-50 text-rose-600 flex items-center justify-center" aria-label="Call us"><i class="ri-phone-fill text-lg"></i></a>
+        <a href="#book" class="h-10 px-4 rounded-full bg-ink text-cream text-xs font-semibold flex items-center gap-1.5"><i class="ri-calendar-line"></i>Book</a>
+      </div>
+      <button id="menuBtn" class="xl:hidden w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-ink/5 hover:bg-ink hover:text-cream transition flex items-center justify-center shrink-0" aria-label="Open menu">
+        <i class="ri-menu-3-line text-xl"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="fixed inset-0 z-50 xl:hidden pointer-events-none">
+    <div class="menu-overlay absolute inset-0 bg-ink/50 backdrop-blur-sm opacity-0 transition-opacity duration-500"></div>
+    <aside class="menu-panel absolute top-0 right-0 h-full w-[88%] max-w-sm bg-ink text-cream flex flex-col translate-x-full transition-transform duration-500 overflow-y-auto">
+      <div class="flex justify-between items-center px-6 h-16 sm:h-20 border-b border-white/10 shrink-0">
+        <div class="flex items-center gap-2.5">
+          <span class="w-9 h-9 rounded-full border border-gold-500/60 flex items-center justify-center font-serif text-xl text-gold-300">R</span>
+          <span class="leading-none"><span class="block font-serif text-xl">Reflejo</span><span class="block text-[9px] uppercase tracking-[0.4em] text-gold-400">Med Spa</span></span>
+        </div>
+        <button id="menuClose" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center" aria-label="Close menu"><i class="ri-close-line text-xl"></i></button>
+      </div>
+      <ul class="px-6 py-4 flex-1">
+        <li class="menu-item"><a href="#treatments" class="mobile-link"><span>01</span>Treatments<i class="ri-arrow-right-up-line"></i></a></li>
+        <li class="menu-item"><a href="#results" class="mobile-link"><span>02</span>Results<i class="ri-arrow-right-up-line"></i></a></li>
+        <li class="menu-item"><a href="#memberships" class="mobile-link"><span>03</span>Memberships<i class="ri-arrow-right-up-line"></i></a></li>
+        <li class="menu-item"><a href="#automation" class="mobile-link"><span>04</span>Smart Booking<i class="ri-arrow-right-up-line"></i></a></li>
+        <li class="menu-item"><a href="#reviews" class="mobile-link"><span>05</span>Reviews<i class="ri-arrow-right-up-line"></i></a></li>
+        <li class="menu-item"><a href="#contact" class="mobile-link"><span>06</span>Contact<i class="ri-arrow-right-up-line"></i></a></li>
+      </ul>
+      <div class="menu-item px-6 pb-8 space-y-4 shrink-0">
+        <div class="rounded-2xl bg-white/5 border border-white/10 p-4 flex items-center gap-3">
+          <span class="w-10 h-10 shrink-0 rounded-xl bg-gold-400/20 text-gold-300 flex items-center justify-center"><i class="ri-gift-2-line"></i></span>
+          <p class="text-sm text-cream/80"><b class="text-cream">$50 off</b> your first treatment</p>
+        </div>
+        <a href="#book" class="mobile-link-btn btn-gold w-full justify-center">Book Your Visit <i class="ri-arrow-right-line"></i></a>
+        <a href="tel:+16026897795" class="flex items-center justify-center gap-2 py-1 text-sm text-cream/80"><i class="ri-phone-line text-gold-300"></i>(602) 689-7795</a>
+        <div class="flex justify-center gap-3 pt-1">
+          <a href="#" class="social" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+          <a href="#" class="social" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+          <a href="#" class="social" aria-label="TikTok"><i class="ri-tiktok-fill"></i></a>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="relative lg:min-h-[92vh] flex items-center overflow-hidden">
+      <div class="absolute inset-0">
+        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=2000&q=80" alt="Woman receiving a luxury facial treatment" class="w-full h-full object-cover object-[70%_center] lg:object-center hero-img" />
+        <div class="absolute inset-0 bg-ink/75 lg:bg-transparent lg:bg-gradient-to-r lg:from-ink/90 lg:via-ink/65 lg:to-ink/20"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-transparent lg:from-ink/60 lg:via-transparent"></div>
+      </div>
+
+      <!-- floating blobs -->
+      <div class="blob w-72 h-72 bg-rose-300/30 top-20 -left-20"></div>
+      <div class="blob blob-2 w-96 h-96 bg-gold-400/20 bottom-0 right-10"></div>
+
+      <div class="relative max-w-7xl mx-auto px-5 lg:px-8 pt-10 pb-12 sm:py-20 grid lg:grid-cols-12 gap-10 lg:gap-12 items-center w-full">
+        <div class="lg:col-span-7 text-cream">
+          <div data-aos="fade-up" class="inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/10 backdrop-blur border border-white/15 text-[10px] sm:text-xs tracking-widest uppercase">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Now booking in Phoenix, AZ
+          </div>
+          <h1 data-aos="fade-up" data-aos-delay="100" class="font-serif text-[2.5rem] sm:text-6xl lg:text-7xl xl:text-[5.4rem] leading-[1.06] mt-5 sm:mt-6 font-medium">
+            Reveal the <em class="text-gold-300 italic">reflection</em><br class="hidden sm:block" /> you were meant to see.
+          </h1>
+          <p data-aos="fade-up" data-aos-delay="200" class="mt-4 sm:mt-6 text-[15px] sm:text-lg text-cream/80 max-w-xl leading-relaxed">
+            Medical-grade aesthetics delivered with an artist's eye<span class="hidden sm:inline">. Botox, fillers, HydraFacials, laser and skin rejuvenation</span> — tailored to you by licensed professionals.
+          </p>
+          <div data-aos="fade-up" data-aos-delay="300" class="mt-7 sm:mt-9 flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <a href="#book" class="btn-gold justify-center">Book a Free Consultation <i class="ri-arrow-right-up-line"></i></a>
+            <a href="#treatments" class="btn-ghost justify-center">Explore Treatments</a>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="400" class="mt-7 sm:mt-12 flex items-center gap-4 sm:gap-8">
+            <div class="flex -space-x-3">
+              <img class="w-9 h-9 sm:w-11 sm:h-11 rounded-full border-2 border-ink object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80" alt="Client" />
+              <img class="w-9 h-9 sm:w-11 sm:h-11 rounded-full border-2 border-ink object-cover" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=120&q=80" alt="Client" />
+              <img class="w-9 h-9 sm:w-11 sm:h-11 rounded-full border-2 border-ink object-cover" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80" alt="Client" />
+              <span class="w-9 h-9 sm:w-11 sm:h-11 rounded-full border-2 border-ink bg-gold-500 text-ink text-xs font-bold flex items-center justify-center">2k+</span>
+            </div>
+            <div>
+              <div class="flex text-gold-400 text-sm"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+              <p class="text-xs sm:text-sm text-cream/70 mt-1">Loved by 2,000+ Phoenix clients</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick booking card -->
+        <div class="lg:col-span-5" data-aos="fade-left" data-aos-delay="300">
+          <div class="glass-card rounded-[1.75rem] sm:rounded-[2rem] p-5 sm:p-8 text-cream lg:float-slow">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-xs uppercase tracking-[0.3em] text-gold-300">New Client Offer</p>
+                <h3 class="font-serif text-2xl sm:text-3xl mt-1">$50 off your first visit</h3>
+              </div>
+              <span class="w-12 h-12 sm:w-14 sm:h-14 shrink-0 rounded-2xl bg-gold-400/20 flex items-center justify-center text-gold-300 text-2xl"><i class="ri-gift-2-line"></i></span>
+            </div>
+            <form id="heroForm" class="mt-6 space-y-3">
+              <input required name="name" type="text" placeholder="Your name" class="input-glass" />
+              <input required name="phone" type="tel" placeholder="Mobile number" class="input-glass" />
+              <select name="service" class="input-glass">
+                <option class="text-ink">Botox & Dysport</option>
+                <option class="text-ink">Dermal Fillers</option>
+                <option class="text-ink">HydraFacial</option>
+                <option class="text-ink">Laser Hair Removal</option>
+                <option class="text-ink">Microneedling</option>
+                <option class="text-ink">Not sure — need advice</option>
+              </select>
+              <button type="submit" class="btn-gold w-full justify-center">Claim My Offer <i class="ri-send-plane-fill"></i></button>
+            </form>
+            <p class="text-[11px] text-cream/60 mt-4 flex items-center gap-2"><i class="ri-flashlight-line text-gold-300"></i> Instant text confirmation · No spam, ever</p>
+          </div>
+        </div>
+      </div>
+
+      <a href="#marquee" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-cream/70 hidden md:flex flex-col items-center gap-2 text-[10px] uppercase tracking-[0.3em]">
+        Scroll <span class="scroll-indicator"></span>
+      </a>
+    </section>
+
+    <!-- MARQUEE -->
+    <section id="marquee" class="bg-ink text-cream py-5 overflow-hidden border-y border-white/5">
+      <div class="marquee flex gap-12 whitespace-nowrap font-serif text-2xl sm:text-3xl italic">
+        <span>Botox</span><span class="text-gold-400">✦</span><span>Dermal Fillers</span><span class="text-gold-400">✦</span><span>HydraFacial</span><span class="text-gold-400">✦</span><span>Laser Hair Removal</span><span class="text-gold-400">✦</span><span>Microneedling</span><span class="text-gold-400">✦</span><span>Chemical Peels</span><span class="text-gold-400">✦</span><span>IV Therapy</span><span class="text-gold-400">✦</span><span>Body Contouring</span><span class="text-gold-400">✦</span>
+        <span>Botox</span><span class="text-gold-400">✦</span><span>Dermal Fillers</span><span class="text-gold-400">✦</span><span>HydraFacial</span><span class="text-gold-400">✦</span><span>Laser Hair Removal</span><span class="text-gold-400">✦</span><span>Microneedling</span><span class="text-gold-400">✦</span><span>Chemical Peels</span><span class="text-gold-400">✦</span><span>IV Therapy</span><span class="text-gold-400">✦</span><span>Body Contouring</span><span class="text-gold-400">✦</span>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="py-16 sm:py-24 lg:py-32 relative">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
+        <div class="relative" data-aos="fade-right">
+          <div class="relative rounded-[1.75rem] sm:rounded-[2.5rem] overflow-hidden aspect-[4/5] img-zoom">
+            <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=1200&q=80" alt="Serene med spa treatment room" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="absolute -bottom-6 -right-2 sm:-bottom-8 sm:-right-8 w-32 sm:w-56 rounded-3xl overflow-hidden border-8 border-cream shadow-2xl img-zoom float-slow">
+            <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=600&q=80" alt="Medical grade skincare" class="w-full aspect-square object-cover" loading="lazy" />
+          </div>
+          <div class="absolute top-6 -left-2 sm:top-8 sm:-left-8 bg-white rounded-2xl shadow-xl px-4 py-3 sm:px-5 sm:py-4 flex items-center gap-3 float-fast">
+            <span class="w-12 h-12 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center text-xl"><i class="ri-shield-check-line"></i></span>
+            <div><p class="font-bold text-lg leading-none">Licensed</p><p class="text-xs text-ink/60 mt-1">Medical professionals</p></div>
+          </div>
+        </div>
+
+        <div data-aos="fade-left">
+          <p class="eyebrow">About Reflejo</p>
+          <h2 class="section-title mt-4">Where clinical expertise meets <em class="text-rose-600">quiet luxury.</em></h2>
+          <p class="mt-6 text-ink/70 text-lg leading-relaxed">“Reflejo” means <em>reflection</em> — and that's our philosophy. We don't change who you are; we enhance the best version of you. Every plan starts with a one-on-one consultation, a skin analysis, and an honest conversation about what will actually work.</p>
+          <div class="mt-8 sm:mt-10 grid grid-cols-2 gap-3 sm:gap-6">
+            <div class="stat-card"><span class="counter font-serif text-4xl sm:text-5xl text-rose-600" data-target="2000">0</span><span class="font-serif text-4xl sm:text-5xl text-rose-600">+</span><p class="text-sm text-ink/60 mt-1">Happy clients</p></div>
+            <div class="stat-card"><span class="counter font-serif text-4xl sm:text-5xl text-rose-600" data-target="15">0</span><span class="font-serif text-4xl sm:text-5xl text-rose-600">+</span><p class="text-sm text-ink/60 mt-1">Signature treatments</p></div>
+            <div class="stat-card"><span class="counter font-serif text-4xl sm:text-5xl text-rose-600" data-target="98">0</span><span class="font-serif text-4xl sm:text-5xl text-rose-600">%</span><p class="text-sm text-ink/60 mt-1">Would recommend</p></div>
+            <div class="stat-card"><span class="counter font-serif text-4xl sm:text-5xl text-rose-600" data-target="5">0</span><span class="font-serif text-4xl sm:text-5xl text-rose-600">★</span><p class="text-sm text-ink/60 mt-1">Average rating</p></div>
+          </div>
+          <a href="#book" class="btn-primary mt-10">Meet Us — Book a Consult <i class="ri-arrow-right-line"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TREATMENTS -->
+    <section id="treatments" class="py-16 sm:py-24 lg:py-32 bg-sand/60 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+          <div data-aos="fade-up">
+            <p class="eyebrow">Our Treatments</p>
+            <h2 class="section-title mt-4 max-w-2xl">Signature services, <em class="text-rose-600">personalized</em> for you.</h2>
+          </div>
+          <div class="flex gap-2 overflow-x-auto no-scrollbar -mx-5 px-5 sm:mx-0 sm:px-0 sm:flex-wrap" data-aos="fade-up" data-aos-delay="100" id="filterBtns">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="injectables">Injectables</button>
+            <button class="filter-btn" data-filter="skin">Skin</button>
+            <button class="filter-btn" data-filter="laser">Laser</button>
+            <button class="filter-btn" data-filter="wellness">Wellness</button>
+          </div>
+        </div>
+
+        <div id="treatmentGrid" class="mt-8 sm:mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          <!-- cards injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTS / BEFORE AFTER -->
+    <section id="results" class="py-16 sm:py-24 lg:py-32">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
+        <div data-aos="fade-right">
+          <p class="eyebrow">Real Results</p>
+          <h2 class="section-title mt-4">Results that speak <em class="text-rose-600">softly</em> — but clearly.</h2>
+          <p class="mt-6 text-ink/70 text-lg leading-relaxed">Drag the slider to see the difference a tailored treatment plan can make. Natural, refreshed, never overdone.</p>
+          <div class="mt-6 sm:mt-8 flex gap-2 sm:gap-3 overflow-x-auto no-scrollbar" id="baTabs">
+            <button class="ba-tab active" data-before="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=1200&q=80" data-after="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=1200&q=80" data-label="HydraFacial · 1 session">HydraFacial</button>
+            <button class="ba-tab" data-before="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=1200&q=80" data-after="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=1200&q=80" data-label="Botox · 14 days">Botox</button>
+            <button class="ba-tab" data-before="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=1200&q=80" data-after="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=1200&q=80" data-label="Microneedling · 3 sessions">Microneedling</button>
+          </div>
+          <ul class="mt-10 space-y-4">
+            <li class="flex gap-4"><span class="check"><i class="ri-check-line"></i></span><span class="text-ink/75">Customized plan after a complimentary skin analysis</span></li>
+            <li class="flex gap-4"><span class="check"><i class="ri-check-line"></i></span><span class="text-ink/75">FDA-approved products & medical-grade technology</span></li>
+            <li class="flex gap-4"><span class="check"><i class="ri-check-line"></i></span><span class="text-ink/75">Automatic aftercare texts & follow-up check-ins</span></li>
+          </ul>
+          <p class="text-xs text-ink/40 mt-6">*Sample imagery for demonstration. Real client photos would be added with consent.</p>
+        </div>
+
+        <div data-aos="zoom-in">
+          <div id="baSlider" class="ba-slider relative rounded-[1.75rem] sm:rounded-[2rem] overflow-hidden aspect-square sm:aspect-[4/5] shadow-2xl select-none">
+            <img id="baAfter" src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=1200&q=80" alt="After treatment" class="absolute inset-0 w-full h-full object-cover ba-after" draggable="false" />
+            <div id="baBeforeWrap" class="absolute inset-0 overflow-hidden" style="width:50%">
+              <img id="baBefore" src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=1200&q=80" alt="Before treatment" class="absolute inset-0 h-full object-cover ba-before" draggable="false" />
+            </div>
+            <span class="absolute top-5 left-5 ba-label">Before</span>
+            <span class="absolute top-5 right-5 ba-label">After</span>
+            <div id="baHandle" class="absolute top-0 bottom-0 w-[3px] bg-white" style="left:50%">
+              <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-white shadow-xl flex items-center justify-center text-ink text-xl"><i class="ri-arrow-left-right-line"></i></span>
+            </div>
+            <div class="absolute bottom-5 left-5 right-5 flex justify-center">
+              <span id="baCaption" class="px-4 py-2 rounded-full bg-ink/70 backdrop-blur text-cream text-sm">HydraFacial · 1 session</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="py-16 sm:py-24 bg-ink text-cream relative overflow-hidden">
+      <div class="blob w-[30rem] h-[30rem] bg-rose-500/10 -top-40 -right-40"></div>
+      <div class="max-w-7xl mx-auto px-5 lg:px-8 relative">
+        <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
+          <p class="eyebrow !text-gold-400">Your Journey</p>
+          <h2 class="section-title mt-4 !text-cream">From first click to <em class="text-gold-300">glowing skin</em>.</h2>
+        </div>
+        <div class="mt-10 sm:mt-16 grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-10 sm:gap-8 relative">
+          <div class="hidden md:block absolute top-10 left-[12%] right-[12%] h-px bg-gradient-to-r from-transparent via-gold-500/50 to-transparent"></div>
+          <div class="process-step" data-aos="fade-up" data-aos-delay="0"><span class="process-icon"><i class="ri-calendar-check-line"></i></span><h4>Book Online</h4><p>Pick a treatment and time in under 60 seconds — 24/7.</p></div>
+          <div class="process-step" data-aos="fade-up" data-aos-delay="100"><span class="process-icon"><i class="ri-message-3-line"></i></span><h4>Instant Confirmation</h4><p>Receive a text & email instantly, plus reminders before your visit.</p></div>
+          <div class="process-step" data-aos="fade-up" data-aos-delay="200"><span class="process-icon"><i class="ri-user-heart-line"></i></span><h4>Consult & Treat</h4><p>Skin analysis and a personalized plan with our licensed injectors.</p></div>
+          <div class="process-step" data-aos="fade-up" data-aos-delay="300"><span class="process-icon"><i class="ri-sparkling-line"></i></span><h4>Aftercare & Glow</h4><p>Automatic aftercare tips and a check-in to keep results lasting.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEMBERSHIPS -->
+    <section id="memberships" class="py-16 sm:py-24 lg:py-32">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
+          <p class="eyebrow">Glow Memberships</p>
+          <h2 class="section-title mt-4">Consistent care, <em class="text-rose-600">exclusive</em> savings.</h2>
+          <div class="mt-8 inline-flex p-1 rounded-full bg-sand">
+            <button class="billing-btn active" data-billing="monthly">Monthly</button>
+            <button class="billing-btn" data-billing="yearly">Yearly <span class="text-[10px] bg-rose-600 text-white px-2 py-0.5 rounded-full ml-1">-15%</span></button>
+          </div>
+        </div>
+
+        <div class="mt-12 sm:mt-14 grid md:grid-cols-3 gap-8 md:gap-6 lg:gap-8 items-stretch">
+          <div class="price-card" data-aos="fade-up">
+            <p class="text-sm uppercase tracking-widest text-rose-600 font-semibold">Glow</p>
+            <div class="mt-4 flex items-end gap-1"><span class="font-serif text-6xl price" data-monthly="99" data-yearly="84">$99</span><span class="text-ink/50 mb-2">/mo</span></div>
+            <p class="text-ink/60 mt-2 text-sm">Perfect for monthly skin maintenance.</p>
+            <ul class="price-list">
+              <li><i class="ri-check-line"></i>1 signature facial / month</li>
+              <li><i class="ri-check-line"></i>10% off all skincare</li>
+              <li><i class="ri-check-line"></i>Birthday treat</li>
+              <li><i class="ri-check-line"></i>Priority SMS booking</li>
+            </ul>
+            <a href="#book" class="btn-outline w-full justify-center mt-auto">Choose Glow</a>
+          </div>
+          <div class="price-card featured" data-aos="fade-up" data-aos-delay="100">
+            <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gold-500 text-ink text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest">Most Popular</span>
+            <p class="text-sm uppercase tracking-widest text-gold-300 font-semibold">Radiance</p>
+            <div class="mt-4 flex items-end gap-1"><span class="font-serif text-6xl price" data-monthly="179" data-yearly="152">$179</span><span class="text-cream/50 mb-2">/mo</span></div>
+            <p class="text-cream/60 mt-2 text-sm">Our best-loved plan for visible results.</p>
+            <ul class="price-list">
+              <li><i class="ri-check-line"></i>HydraFacial or peel monthly</li>
+              <li><i class="ri-check-line"></i>$2 off per unit of Botox</li>
+              <li><i class="ri-check-line"></i>15% off fillers & skincare</li>
+              <li><i class="ri-check-line"></i>Free LED add-on each visit</li>
+              <li><i class="ri-check-line"></i>Members-only events</li>
+            </ul>
+            <a href="#book" class="btn-gold w-full justify-center mt-auto">Choose Radiance</a>
+          </div>
+          <div class="price-card" data-aos="fade-up" data-aos-delay="200">
+            <p class="text-sm uppercase tracking-widest text-rose-600 font-semibold">Luxe</p>
+            <div class="mt-4 flex items-end gap-1"><span class="font-serif text-6xl price" data-monthly="299" data-yearly="254">$299</span><span class="text-ink/50 mb-2">/mo</span></div>
+            <p class="text-ink/60 mt-2 text-sm">The full VIP experience.</p>
+            <ul class="price-list">
+              <li><i class="ri-check-line"></i>Any premium facial monthly</li>
+              <li><i class="ri-check-line"></i>20 units Botox per quarter</li>
+              <li><i class="ri-check-line"></i>20% off all services</li>
+              <li><i class="ri-check-line"></i>Monthly IV vitamin drip</li>
+              <li><i class="ri-check-line"></i>Dedicated concierge line</li>
+            </ul>
+            <a href="#book" class="btn-outline w-full justify-center mt-auto">Choose Luxe</a>
+          </div>
+        </div>
+        <p class="text-center text-xs text-ink/40 mt-8">*Sample pricing for demo purposes — final pricing set by Reflejo Med Spa.</p>
+      </div>
+    </section>
+
+    <!-- AUTOMATION SHOWCASE -->
+    <section id="automation" class="py-16 sm:py-24 lg:py-32 bg-gradient-to-b from-rose-50 to-cream relative overflow-hidden">
+      <div class="blob w-96 h-96 bg-gold-400/20 top-10 -left-32"></div>
+      <div class="max-w-7xl mx-auto px-5 lg:px-8 relative">
+        <div class="text-center max-w-3xl mx-auto" data-aos="fade-up">
+          <p class="eyebrow">Smart Booking & Automations</p>
+          <h2 class="section-title mt-4">Your front desk — <em class="text-rose-600">working 24/7.</em></h2>
+          <p class="mt-5 text-ink/65 text-lg">Every visitor becomes a lead. Every lead gets an instant reply. Every booking gets reminders. No more missed calls or no-shows.</p>
+        </div>
+
+        <div class="mt-10 sm:mt-16 grid lg:grid-cols-12 gap-10 items-center">
+          <!-- feature list -->
+          <div class="lg:col-span-4 space-y-4 order-2 lg:order-1">
+            <div class="auto-feature active" data-step="0" data-aos="fade-right">
+              <span class="auto-icon"><i class="ri-calendar-event-line"></i></span>
+              <div><h4>Online Appointment Requests</h4><p>Clients book 24/7 — even at midnight.</p></div>
+            </div>
+            <div class="auto-feature" data-step="1" data-aos="fade-right" data-aos-delay="80">
+              <span class="auto-icon"><i class="ri-message-2-line"></i></span>
+              <div><h4>Instant SMS Confirmation</h4><p>Auto-reply in seconds, before they call a competitor.</p></div>
+            </div>
+            <div class="auto-feature" data-step="2" data-aos="fade-right" data-aos-delay="160">
+              <span class="auto-icon"><i class="ri-notification-3-line"></i></span>
+              <div><h4>Owner Notifications</h4><p>You get pinged instantly with lead details.</p></div>
+            </div>
+            <div class="auto-feature" data-step="3" data-aos="fade-right" data-aos-delay="240">
+              <span class="auto-icon"><i class="ri-alarm-line"></i></span>
+              <div><h4>Smart Reminders</h4><p>24h & 2h reminders cut no-shows by up to 40%.</p></div>
+            </div>
+            <div class="auto-feature" data-step="4" data-aos="fade-right" data-aos-delay="320">
+              <span class="auto-icon"><i class="ri-repeat-line"></i></span>
+              <div><h4>Follow-ups & Reviews</h4><p>Aftercare texts, rebooking nudges & Google review requests.</p></div>
+            </div>
+          </div>
+
+          <!-- Phone mock -->
+          <div class="lg:col-span-4 flex justify-center order-1 lg:order-2" data-aos="zoom-in">
+            <div class="phone">
+              <div class="phone-notch"></div>
+              <div class="phone-screen">
+                <div class="px-4 pt-9 pb-3 border-b border-ink/5 flex items-center gap-3 bg-white/80 backdrop-blur">
+                  <span class="w-9 h-9 rounded-full bg-ink text-gold-300 font-serif flex items-center justify-center">R</span>
+                  <div class="leading-tight"><p class="text-sm font-bold">Reflejo Med Spa</p><p class="text-[10px] text-emerald-600">● Automated assistant</p></div>
+                </div>
+                <div id="chatFeed" class="p-3 space-y-2 h-[440px] overflow-y-auto no-scrollbar"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Owner dashboard -->
+          <div class="lg:col-span-4 order-3" data-aos="fade-left">
+            <div class="bg-white rounded-3xl shadow-xl border border-ink/5 overflow-hidden">
+              <div class="px-5 py-4 bg-ink text-cream flex items-center justify-between">
+                <div class="flex items-center gap-2"><i class="ri-dashboard-3-line text-gold-300"></i><span class="font-semibold text-sm">Owner Dashboard</span></div>
+                <span class="text-[10px] px-2 py-1 rounded-full bg-emerald-500/20 text-emerald-300 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>LIVE</span>
+              </div>
+              <div class="grid grid-cols-3 divide-x divide-ink/5 border-b border-ink/5 text-center">
+                <div class="py-4"><p id="kpiLeads" class="font-serif text-3xl text-rose-600">0</p><p class="text-[10px] uppercase tracking-wider text-ink/50">Leads</p></div>
+                <div class="py-4"><p id="kpiBooked" class="font-serif text-3xl text-rose-600">0</p><p class="text-[10px] uppercase tracking-wider text-ink/50">Booked</p></div>
+                <div class="py-4"><p id="kpiReply" class="font-serif text-3xl text-rose-600">4s</p><p class="text-[10px] uppercase tracking-wider text-ink/50">Reply time</p></div>
+              </div>
+              <div class="p-4">
+                <div class="flex items-center justify-between mb-3">
+                  <p class="text-xs uppercase tracking-widest text-ink/50 font-semibold">Recent leads</p>
+                  <button id="clearLeads" class="text-[11px] text-rose-600 hover:underline">Reset demo</button>
+                </div>
+                <ul id="leadList" class="space-y-2 max-h-[300px] overflow-y-auto no-scrollbar"></ul>
+              </div>
+            </div>
+            <p class="text-xs text-ink/50 mt-4 text-center"><i class="ri-information-line"></i> Try the booking form below — your lead appears here live.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOKING -->
+    <section id="book" class="py-16 sm:py-24 lg:py-32 relative">
+      <div class="max-w-6xl mx-auto px-4 sm:px-5 lg:px-8">
+        <div class="grid lg:grid-cols-5 rounded-[1.75rem] sm:rounded-[2.5rem] overflow-hidden shadow-2xl bg-white" data-aos="fade-up">
+          <div class="lg:col-span-2 relative min-h-[230px] sm:min-h-[280px]">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80" alt="Relaxing spa treatment" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/40 to-ink/10"></div>
+            <div class="relative h-full p-6 sm:p-8 lg:p-10 flex flex-col justify-end text-cream">
+              <p class="eyebrow !text-gold-300">Book Your Visit</p>
+              <h3 class="font-serif text-3xl sm:text-4xl lg:text-5xl mt-3 leading-tight">Your glow starts in 60 seconds.</h3>
+              <ul class="mt-6 space-y-3 text-sm text-cream/80">
+                <li class="flex items-center gap-3"><i class="ri-time-line text-gold-300"></i> Mon–Sat · 9:00 AM – 7:00 PM</li>
+                <li class="flex items-center gap-3"><i class="ri-map-pin-line text-gold-300"></i> Phoenix, Arizona</li>
+                <li class="flex items-center gap-3"><i class="ri-phone-line text-gold-300"></i> <a href="tel:+16026897795" class="hover:text-gold-300">(602) 689-7795</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="lg:col-span-3 p-5 sm:p-10 lg:p-12">
+            <!-- progress -->
+            <div class="flex items-center gap-3 mb-8">
+              <div class="step-dot active" data-dot="1">1</div><div class="step-line"><span></span></div>
+              <div class="step-dot" data-dot="2">2</div><div class="step-line"><span></span></div>
+              <div class="step-dot" data-dot="3">3</div>
+            </div>
+
+            <form id="bookingForm" novalidate>
+              <!-- Step 1 -->
+              <div class="form-step active" data-step="1">
+                <h4 class="font-serif text-[1.7rem] sm:text-3xl leading-tight">Choose your treatment</h4>
+                <p class="text-ink/50 text-sm mt-1">Select one — we'll tailor it during your consult.</p>
+                <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3" id="serviceChoices"></div>
+                <p class="err text-rose-600 text-xs mt-3 hidden">Please choose a treatment.</p>
+                <div class="mt-8 flex justify-end"><button type="button" class="btn-primary next-step">Continue <i class="ri-arrow-right-line"></i></button></div>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="form-step" data-step="2">
+                <h4 class="font-serif text-[1.7rem] sm:text-3xl leading-tight">Pick a date & time</h4>
+                <p class="text-ink/50 text-sm mt-1">Real-time availability (demo).</p>
+                <div class="mt-6 flex gap-2 overflow-x-auto no-scrollbar pb-2" id="dateChoices"></div>
+                <div class="mt-5 grid grid-cols-3 sm:grid-cols-4 gap-2" id="timeChoices"></div>
+                <p class="err text-rose-600 text-xs mt-3 hidden">Please choose a date and time.</p>
+                <div class="mt-8 flex justify-between"><button type="button" class="btn-outline prev-step"><i class="ri-arrow-left-line"></i> Back</button><button type="button" class="btn-primary next-step">Continue <i class="ri-arrow-right-line"></i></button></div>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="form-step" data-step="3">
+                <h4 class="font-serif text-[1.7rem] sm:text-3xl leading-tight">Your details</h4>
+                <p class="text-ink/50 text-sm mt-1">We'll text your confirmation instantly.</p>
+                <div class="mt-6 grid sm:grid-cols-2 gap-4">
+                  <div class="field"><input required id="fName" name="name" type="text" placeholder=" " /><label for="fName">Full name</label></div>
+                  <div class="field"><input required id="fPhone" name="phone" type="tel" placeholder=" " /><label for="fPhone">Mobile number</label></div>
+                  <div class="field sm:col-span-2"><input required id="fEmail" name="email" type="email" placeholder=" " /><label for="fEmail">Email address</label></div>
+                  <div class="field sm:col-span-2"><textarea id="fNotes" name="notes" rows="3" placeholder=" "></textarea><label for="fNotes">Anything we should know? (optional)</label></div>
+                </div>
+                <label class="mt-4 flex items-start gap-3 text-xs text-ink/60 cursor-pointer"><input type="checkbox" checked class="mt-0.5 accent-rose-600" /> Text me appointment reminders & exclusive offers. Reply STOP anytime.</label>
+                <div id="summary" class="mt-5 p-4 rounded-2xl bg-rose-50 text-sm flex items-center gap-3"></div>
+                <p class="err text-rose-600 text-xs mt-3 hidden">Please fill in your name, phone and a valid email.</p>
+                <div class="mt-8 flex justify-between gap-3"><button type="button" class="btn-outline prev-step !px-5"><i class="ri-arrow-left-line"></i> Back</button><button type="submit" class="btn-gold flex-1 sm:flex-none justify-center">Confirm<span class="hidden sm:inline"> Booking</span> <i class="ri-check-double-line"></i></button></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviews" class="py-16 sm:py-24 lg:py-32 bg-sand/60 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6" data-aos="fade-up">
+          <div>
+            <p class="eyebrow">Client Love</p>
+            <h2 class="section-title mt-4">Kind words from <em class="text-rose-600">our clients.</em></h2>
+          </div>
+          <div class="flex gap-3">
+            <button id="revPrev" class="round-btn" aria-label="Previous"><i class="ri-arrow-left-line"></i></button>
+            <button id="revNext" class="round-btn" aria-label="Next"><i class="ri-arrow-right-line"></i></button>
+          </div>
+        </div>
+        <div class="mt-10 sm:mt-14 overflow-hidden" data-aos="fade-up">
+          <div id="revTrack" class="flex gap-6 transition-transform duration-700 ease-[cubic-bezier(.65,0,.35,1)]"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="py-6 bg-cream">
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-2 px-2">
+        <div class="gallery-item"><img loading="lazy" src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80" alt="Spa massage" /></div>
+        <div class="gallery-item"><img loading="lazy" src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=800&q=80" alt="Skincare serum" /></div>
+        <div class="gallery-item md:row-span-1"><img loading="lazy" src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80" alt="Spa relaxation" /></div>
+        <div class="gallery-item"><img loading="lazy" src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&w=800&q=80" alt="Spa interior" /></div>
+        <div class="gallery-item hidden md:block"><img loading="lazy" src="https://images.unsplash.com/photo-1552693673-1bf958298935?auto=format&fit=crop&w=800&q=80" alt="Facial mask treatment" /></div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16 sm:py-24 lg:py-32">
+      <div class="max-w-4xl mx-auto px-5 lg:px-8">
+        <div class="text-center" data-aos="fade-up">
+          <p class="eyebrow">FAQ</p>
+          <h2 class="section-title mt-4">Questions, <em class="text-rose-600">answered.</em></h2>
+        </div>
+        <div class="mt-12 space-y-4" id="faqList" data-aos="fade-up"></div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="px-4 lg:px-8 pb-16 sm:pb-24">
+      <div class="max-w-7xl mx-auto relative rounded-[1.75rem] sm:rounded-[2.5rem] overflow-hidden" data-aos="zoom-in">
+        <img src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?auto=format&fit=crop&w=2000&q=80" alt="Spa ambience" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+        <div class="absolute inset-0 bg-ink/75"></div>
+        <div class="relative px-5 py-14 sm:py-24 text-center text-cream">
+          <h2 class="font-serif text-[2.2rem] sm:text-6xl max-w-3xl mx-auto leading-tight">Ready to meet your <em class="text-gold-300">best reflection?</em></h2>
+          <p class="mt-5 text-cream/70 max-w-xl mx-auto">Book online in seconds or call us — new clients save $50 on their first treatment.</p>
+          <div class="mt-8 sm:mt-9 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+            <a href="#book" class="btn-gold justify-center">Book Online <i class="ri-calendar-line"></i></a>
+            <a href="tel:+16026897795" class="btn-ghost justify-center"><i class="ri-phone-line"></i> (602) 689-7795</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="bg-ink text-cream/70 pt-14 sm:pt-20 pb-28 lg:pb-10">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10 sm:gap-12">
+      <div class="col-span-2 lg:col-span-1">
+        <div class="font-serif text-3xl text-cream">Reflejo</div>
+        <div class="text-[10px] uppercase tracking-[0.4em] text-gold-400">Med Spa</div>
+        <p class="mt-5 text-sm leading-relaxed">Phoenix's destination for natural-looking aesthetic medicine and medical-grade skin care.</p>
+        <div class="mt-6 flex gap-3">
+          <a href="#" class="social" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+          <a href="#" class="social" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+          <a href="#" class="social" aria-label="TikTok"><i class="ri-tiktok-fill"></i></a>
+          <a href="#" class="social" aria-label="Google"><i class="ri-google-fill"></i></a>
+        </div>
+      </div>
+      <div>
+        <h5 class="text-cream font-semibold mb-5">Treatments</h5>
+        <ul class="space-y-3 text-sm">
+          <li><a href="#treatments" class="footer-link">Botox & Dysport</a></li>
+          <li><a href="#treatments" class="footer-link">Dermal Fillers</a></li>
+          <li><a href="#treatments" class="footer-link">HydraFacial</a></li>
+          <li><a href="#treatments" class="footer-link">Laser Hair Removal</a></li>
+          <li><a href="#treatments" class="footer-link">IV Therapy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="text-cream font-semibold mb-5">Visit Us</h5>
+        <ul class="space-y-3 text-sm">
+          <li class="flex gap-3"><i class="ri-map-pin-line text-gold-400"></i> Phoenix, AZ</li>
+          <li class="flex gap-3"><i class="ri-phone-line text-gold-400"></i> <a href="tel:+16026897795" class="footer-link">+1 (602) 689-7795</a></li>
+          <li class="flex gap-3"><i class="ri-time-line text-gold-400"></i> Mon–Sat: 9 AM – 7 PM<br />Sun: By appointment</li>
+        </ul>
+      </div>
+      <div class="col-span-2 lg:col-span-1">
+        <h5 class="text-cream font-semibold mb-5">Glow Notes</h5>
+        <p class="text-sm">Monthly skin tips & member-only offers.</p>
+        <form id="newsletterForm" class="mt-4 flex bg-white/5 rounded-full p-1 border border-white/10">
+          <input required type="email" placeholder="Your email" class="flex-1 bg-transparent px-4 text-sm outline-none text-cream placeholder:text-cream/40 min-w-0" />
+          <button class="w-11 h-11 rounded-full bg-gold-500 text-ink flex items-center justify-center shrink-0" aria-label="Subscribe"><i class="ri-arrow-right-line"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 mt-12 sm:mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-4 text-xs text-cream/40">
+      <p>© <span id="year"></span> Reflejo Med Spa. All rights reserved.</p>
+      <p>Demo concept — images for illustration only.</p>
+    </div>
+  </footer>
+
+  <!-- Mobile sticky bar -->
+  <div id="mobileBar" class="fixed bottom-0 inset-x-0 z-40 lg:hidden p-3 pb-[max(.75rem,env(safe-area-inset-bottom))] bg-cream/90 backdrop-blur-xl border-t border-ink/10 flex gap-3">
+    <a href="tel:+16026897795" class="flex-1 btn-outline justify-center !py-3"><i class="ri-phone-line"></i> Call</a>
+    <a href="#book" class="flex-[2] btn-primary justify-center !py-3"><i class="ri-calendar-line"></i> Book Now</a>
+  </div>
+
+  <!-- Floating chat widget -->
+  <button id="chatToggle" class="fixed z-40 right-4 sm:right-5 bottom-[5.5rem] lg:bottom-8 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-ink text-gold-300 text-2xl shadow-2xl flex items-center justify-center chat-pulse" aria-label="Chat with us">
+    <i class="ri-chat-smile-3-line"></i>
+    <span class="absolute -top-1 -right-1 w-5 h-5 bg-rose-600 text-white text-[10px] font-bold rounded-full flex items-center justify-center">1</span>
+  </button>
+  <div id="chatBox" class="fixed z-[45] right-3 sm:right-5 bottom-[9.5rem] lg:bottom-28 w-[calc(100%-1.5rem)] max-w-sm bg-white rounded-3xl shadow-2xl overflow-hidden origin-bottom-right scale-0 opacity-0 transition-all duration-300">
+    <div class="bg-ink text-cream px-5 py-4 flex items-center gap-3">
+      <span class="w-10 h-10 rounded-full bg-gold-500 text-ink font-serif text-xl flex items-center justify-center">R</span>
+      <div class="flex-1"><p class="font-semibold text-sm">Reflejo Concierge</p><p class="text-[11px] text-emerald-300">● Typically replies instantly</p></div>
+      <button id="chatClose" aria-label="Close chat"><i class="ri-close-line text-xl"></i></button>
+    </div>
+    <div id="widgetFeed" class="p-4 space-y-3 h-64 sm:h-72 max-h-[40vh] overflow-y-auto bg-cream/60 text-sm"></div>
+    <div id="widgetQuick" class="px-4 pb-2 flex flex-wrap gap-2 bg-cream/60"></div>
+    <form id="widgetForm" class="flex items-center gap-2 p-3 border-t border-ink/5">
+      <input id="widgetInput" type="text" placeholder="Type a message…" class="flex-1 px-4 py-3 rounded-full bg-sand/60 text-sm outline-none" />
+      <button class="w-11 h-11 rounded-full bg-rose-600 text-white flex items-center justify-center" aria-label="Send"><i class="ri-send-plane-2-fill"></i></button>
+    </form>
+  </div>
+
+  <!-- Lead capture popup -->
+  <div id="leadPopup" class="fixed inset-0 z-[60] bg-ink/60 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-500">
+    <div class="popup-inner bg-white rounded-[2rem] overflow-hidden max-w-3xl w-full grid md:grid-cols-2 shadow-2xl scale-90 transition-transform duration-500">
+      <div class="relative hidden md:block">
+        <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=900&q=80" alt="Glowing skin" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+      </div>
+      <div class="p-6 pt-10 sm:p-10 relative">
+        <button id="popupClose" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-sand flex items-center justify-center" aria-label="Close"><i class="ri-close-line"></i></button>
+        <p class="eyebrow">Exclusive Offer</p>
+        <h3 class="font-serif text-3xl sm:text-4xl mt-3 leading-tight">Get <span class="text-rose-600">$50 off</span> your first treatment</h3>
+        <p class="text-ink/60 text-sm mt-3">Join our VIP list and we'll text your code instantly.</p>
+        <form id="popupForm" class="mt-6 space-y-3">
+          <input required name="name" type="text" placeholder="First name" class="input-light" />
+          <input required name="phone" type="tel" placeholder="Mobile number" class="input-light" />
+          <button class="btn-primary w-full justify-center">Send My Code <i class="ri-gift-line"></i></button>
+        </form>
+        <button id="popupNo" class="block mx-auto mt-4 text-xs text-ink/40 hover:text-ink">No thanks, I'll pay full price</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success modal -->
+  <div id="successModal" class="fixed inset-0 z-[70] bg-ink/70 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-500">
+    <div class="bg-white rounded-[2rem] max-w-md w-full p-6 sm:p-10 text-center max-h-[92vh] overflow-y-auto shadow-2xl scale-90 transition-transform duration-500 modal-inner">
+      <div class="success-check mx-auto"><svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="25" fill="none"/><path fill="none" d="M14 27l7 7 17-17"/></svg></div>
+      <h3 class="font-serif text-4xl mt-6">You're all set!</h3>
+      <p id="successText" class="text-ink/60 mt-3"></p>
+      <div class="mt-6 text-left bg-cream rounded-2xl p-4 space-y-2 text-sm">
+        <p class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-emerald-500"></i> SMS confirmation sent</p>
+        <p class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-emerald-500"></i> Email confirmation sent</p>
+        <p class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-emerald-500"></i> Reminder scheduled 24h before</p>
+        <p class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-emerald-500"></i> Team notified instantly</p>
+      </div>
+      <div class="mt-6 flex flex-col sm:flex-row gap-3">
+        <a id="calLink" href="#" class="btn-outline flex-1 justify-center"><i class="ri-calendar-2-line"></i> Add to Calendar</a>
+        <button id="successClose" class="btn-primary flex-1 justify-center">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast container -->
+  <div id="toasts" class="fixed z-[80] top-20 sm:top-24 right-3 left-3 sm:left-auto sm:right-4 sm:w-96 space-y-3 pointer-events-none"></div>
+
+  <!-- Scroll progress -->
+  <div id="progress" class="fixed top-0 left-0 h-[3px] bg-gradient-to-r from-rose-500 to-gold-400 z-[90]" style="width:0"></div>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
